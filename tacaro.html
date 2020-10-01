@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+                function pulalinha(){
+                    document.write("<br>")
+                    document.write("<br>")
+
+                }
+                
+            
+                function mostra(frase){
+                    document.write(frase);
+                    pulalinha();
+                }
+
+                function calculaInfla (produto, precoIni, precoFin, periodo) {
+                    
+                    var infla = precoFin - precoIni;
+                    mostra ('A inflação do produto '+ produto + ' no periodo de 6 dias foi de ' + infla + ' reais');
+                    return (infla);
+
+                }
+
+                function calculaMedia(x,y,z){
+                    var x = inflaTomate;
+                    var y = inflaArroz;
+                    var z = inflaCenora;
+                    var inflaMedia = (x+y+z)/3;
+                    return inflaMedia;
+
+                }
+                function calculaInflaDia(produto, infla){
+                
+                    var inflaDia = infla/6;
+                    mostra('A inflação diária do produto' + produto + ' foi de '+inflaDia+ ' reais');
+                    return inflaDia;
+
+                }    
+                function calculaMedia (infla1, infla2, infla3, periodo) {
+                    var somaInfla = infla1+infla2+infla3;
+                    var periodo=6
+                    var media = somaInfla/periodo;
+                }
+                    
+                
+                var inflaTomate = calculaInfla("tomate ",3.30,4.70, 6)
+
+                var inflaArroz = calculaInfla("arroz ",2.99,3.25, 6)
+
+                var inflaCenoura = calculaInfla("cenoura",3.99,4.14, 6)
+
+                var inflaMediaProd = calculaMedia (inflaArroz,inflaCenoura,inflaTomate);
+
+                var inflaDiaTomate = calculaInflaDia (' tomate', 1.40)
+
+                var inflaDiaArroz = calculaInflaDia (' arroz', 0.26)
+
+                var inflaDiaCenoura = calculaInflaDia(' cenoura', 0.15)
+
+                calculaMedia(1.4, 0.26, 0.15);
+                mostra("A inflação média dos produtos no período é de "+inflaMedia + " reais.");
+                        
+            
+        </script>
+    </body>
+</html>

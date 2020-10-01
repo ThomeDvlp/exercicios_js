@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restos</title>
+</head>
+<body>
+    <script>
+        function distribuirLaranjas (numDeLaranjas, numDeVizinhos) {
+                         
+            var resto = numeroDeLaranjas%numeroDeVizinhos;
+
+            var vizinhos = (numeroDeLaranjas-resto)/numeroDeVizinhos;
+
+            document.write("Eu fiquei com " + resto + " laranja(s) e meus vizinhos ficaram com " + vizinhos + " cada." + "<br>");
+        }
+
+        var numeroDeLaranjas = prompt("Quantas laranjas vc colheu?");
+
+        var numeroDeVizinhos = prompt("Quantos vizinhos vão entrar na equação ");
+
+        distribuirLaranjas(numeroDeLaranjas, numeroDeVizinhos);
+    
+    </script>
+</body>
+</html>
