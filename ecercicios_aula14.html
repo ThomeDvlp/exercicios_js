@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios Aula 14</title>
+</head>
+<body>
+    <script>
+    function concatena (string1,string2) {
+        var juntas = (string1+' '+string2);
+        document.write(juntas+'<br>');
+    }
+    concatena('Olá', 'Mundo');
+
+    function saudar (x) {
+        document.write('Olá '+x+'.'+' Tudo bem '+x+'?'+'<br>')
+    }
+    saudar (prompt('Digite su nome'))
+   
+    function restar (num) {
+        var resto = num%9;
+        document.write('O resto de '+num+' dividido por 9 é'+resto+'<br>');
+    }
+    restar (prompt('digite um número'));
+
+    function habilitaMotorista(idadeUsuario, idadePermitida){ 
+            if(idadeUsuario >= idadePermitida) {
+                return document.write("A idade do usuário é válida para dirigir. Ele possui " + idadeUsuario + " anos."); 
+            }else{
+                return document.write("A idade do usuário não é válida para dirigir. Ele possui " + idadeUsuario + " anos."+'<br>'); 
+            }
+        }
+    habilitaMotorista(20, 18)
+
+    function semaforo(corSinal) {
+        if (corSinal == "verde") {
+            return ("Voce pode passar");
+        }
+        if (corSinal == "amarelo") {
+            return (" melhor freiar");
+        }
+        if (corSinal == "vermelho") {
+            return ("pare já");
+        } else {
+            return ("invalido");
+        }
+        document.write(semaforo+'<br>');
+    }
+    semaforo(prompt('Digite a cor ou  verde ou amarelo ou vermelho'))
+
+    function menu() {
+        alert(" 1-Refrigerante \n 2-Suco \n 3-Água");
+    }
+
+    menu();
+
+    function pedido(respostaUsuario) {
+        2
+        if (respostaUsuario == "refrigerante ") {
+            return ("Refrigerante = 5,00");
+        }
+        if (respostaUsuario == "suco") {
+            return ("Suco = 4,00");
+        }
+        if (respostaUsuario == "agua") {
+            return ("Água = 1,00");
+        } else {
+            return ("Pedido invalido");
+        }
+
+    }
+
+    var pedidoUsuario = pedido(prompt("digite pedido"));
+    document.write(pedidoUsuario);
+
+    </script>
+</body>
+</html>
