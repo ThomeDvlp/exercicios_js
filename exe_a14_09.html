@@ -1,0 +1,34 @@
+<!- –  Exibindo o menu e pegando a resposta do usuário: faça uma função que exibe o menu de
+bebidas de um restaurante (utilizando document.write), com um item em cada linha: 1-
+Refrigerante, 2-Suco, 3-Água. Após isso, receba a escolha do cliente como um número
+(utilizando prompt) e exiba na tela o tipo da bebida escolhida pelo cliente – ->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 14 Exe09</title>
+</head>
+<body>
+    <script>
+        
+        
+    function pedido(respostaUsuario) {
+         
+        if (respostaUsuario == 1) {
+            return ("Refrigerante = 5,00");
+        } else if (respostaUsuario == 2) {
+            return ("Suco = 4,00");        
+        } else if (respostaUsuario == 3) {
+            return ("Água = 1,00");
+        } else {
+            return ("Pedido invalido");
+        }
+    }
+    document.write('1-Refrigerante <br> 2-Suco <br> 3-Água <br>')
+    var pedidoUsuario = pedido(prompt( '1-Refrigerante \n 2-Suco \n 3-Água \n digite o número pedido'));
+    alert(pedidoUsuario);
+    </script>
+</body>
+</html>

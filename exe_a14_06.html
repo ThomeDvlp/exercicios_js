@@ -1,0 +1,40 @@
+<!--
+    6-Semáforo: faça uma função que recebe como parâmetro as strings "verde", "amarelo" ou
+"vermelho". Caso o parâmetro passado seja "verde", a função deve retornar "pode passar!", caso
+seja "amarelo", retorna "melhor freiar", caso seja "vermelhor", "pare já!". Utilize document.write
+para escrever na tela o resultado desta função com os parâmetros a sua escolha. Teste todas as
+saídas possíveis.
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 14 Exe06</title>
+</head>
+<body>
+    <script>
+        function avancar (cor) {
+               
+            if (cor == 'verde') {
+                mensagem =  'Siga em frente';
+            } else  if (cor == 'amarelo') {
+                mensagem =  'Melhor parar';
+            } else if (cor == 'vermelho') {
+                mensagem =  'Pare antes da faixa';
+            } else {
+                mensagem = 'Isso não é cor de semáforo';
+            }
+
+            return  mensagem
+            
+        }
+        document.write(avancar(prompt('Digite a cor do semáforo')));
+        
+       
+
+        
+    </script>
+</body>
+</html>

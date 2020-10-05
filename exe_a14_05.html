@@ -1,0 +1,28 @@
+<!--
+    5. Bebedeira: Crie uma função que recebe 2 parâmetros: a idade do usuário e a idade em que é
+permitido beber em algum país. Essa função deve retornar o texto "você pode beber" caso a
+idade do usuário seja maior ou igual a estabelecida para consumo de bebidas alcoólicas no país
+e "você não pode beber" caso contrário. Utilize document.write para escrever na tela o resultado
+desta função com os parâmetros a sua escolha. Teste todas as saídas possíveis.
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 14 Exe06</title>
+</head>
+<body>
+    <script>
+        function podeBeber(idadeUsuario, idadePermitida){ 
+            if(idadeUsuario >= idadePermitida) {
+                return document.write("Se voê não for alcóolatra, pode beber(moderadamente=)."); 
+            }else{
+                return document.write("Não  pode beber."); 
+            }
+        }
+    podeBeber(prompt('Digite a sua Idade'), prompt('Qual a idade mínime necessária para o consumo de bebidas alcoólicas no país em questão?'))
+    </script>
+</body>
+</html>
