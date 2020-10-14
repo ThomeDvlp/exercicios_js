@@ -1,0 +1,13 @@
+head {
+    font-family: 'Piedra', cursive;
+}
+
+body {
+    font-family: 'Piedra', cursive;
+    
+}
+
+#background {
+    background-image: url(/imagens_jogoa20/cavernaSombria.jpg);
+    image-size: 100%;
+}
