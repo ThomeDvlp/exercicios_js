@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            background-color: aqua;
+            
+        }
+        h1{
+            text-align: center;
+        }
+
+        BUTTON {
+            margin:10px; 
+            margin-left: 30%;
+            margin-right: 30%;   
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content:space-around;
+            align-items:center;
+        }
+    </style>
+    <title>botões</title>
+</head>
+<body>
+<header>
+    <H1>Multiplos Botões</H1>
+</header>
+
+    <script>
+             
+        
+
+    
+    function multiple (numbers){
+        
+        for (var i = 0; i < numbers; i++) {
+            function createButton(){
+            var btn = document.createElement('BUTTON');
+            var lbl = document.createTextNode("Botão número "+i+"");        
+            btn.appendChild(lbl);   
+            btn.onclick = function(){
+        
+            window.history.go(0);
+            }
+            document.body.appendChild(btn);    
+            }       
+            createButton(); 
+        }
+
+    }
+    multiple (20);
+    </script>
+    
+</body>
+</html>
