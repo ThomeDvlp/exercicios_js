@@ -1,5 +1,5 @@
-/* Como chamar os comandos do html*/
-var texto = document.querySelector("#gameText");
+
+var texto = document.getElementById("mensagem");
 var botao1 = document.querySelector("#btn-1");
 var botao2 = document.querySelector("#btn-2");
 
@@ -7,70 +7,76 @@ var botao2 = document.querySelector("#btn-2");
 function iniciarJogo () {
     
     botao1.onclick = Start;
+    botao2.onclick = Start;
 }
 
 function Start() {
     /* O texto mostrado na mensagem. */
-    texto.textContent = "Depois de uma noite de sonhos muito estranhos vc desperta  muito assustado, mas abrir os olhos repara que está em uma caverna completametne escura. O QUE VOCÊ IRÁ FAZER?    ";
+    texto.textContent = "Depois de uma noite muito sinistra, e recheada de sonhos bizarros vc desperta na Caverna Escura. O Breu da escuridão é tão denso que vc não consegue enxergar um palmo a frente do seu nariz, seem referência de chã, céu e norte. Não há pistas nenhuma de como você chegou nesse cenário. Descubra se você está sonhando, tendo um pesadelo, ou é a mais pura e tenebrosa realidade. O quê fazer?!?";
 
     /* Os botões que são mostrados e são escondidos. */
     botao2.style.display = "inline-block";
 
    
     /* O texto no corpo dos botões. */
-    botao1.innerText = "Acordo, levanto e tento examinar o espaço";
-    botao2.innerText = "Continuo deitado e volto a dormir pois ainda estou sonhando";
+    botao1.innerText = "Enfrenta o medo, o desconforto, e levanta-se em busca de uma luz em sua razão";
+    botao2.innerText = "Volta a dormir, afinal isso tudo não passa de um simples e sombrio pesadelo";
         
     /* As funções que os botões chamam ao serem clicados. */
     botao1.onclick = levanto;
     botao2.onclick = deitado;
 }
 function levanto(){
-    texto.textContent = "A caverna está completamente escura, e vc percebe que estava deitado dentro de um saco de dormir. Enquanto se laventa encontra um telefone celular que está com a carga completa. O que vc faz?"
-    botao1.innerText = "Mantenho ela desligada pra economizar bateria";
-    botao2.innerText = "Ligo o celular e uso como lanterna";
+    texto.textContent = "O ambiente completamente escuro é frio é úmido, escuta-se um gotejar incessante em diversos pontos próximos. Você estava deitado dentro de um saco de dormir que foi devidamente posicionado sobre um isolante térmico. Sua única recordação é de que estava em um cocktail  de boas vindas na empresa em vc tinha acabado de ser contratado:  Google.   Ao sair do saco de dormir vc tateia todo o perímetro que estava em seu entorno e acha um aparelho smartphone que estava bem próximo de onde encontrava-se a sua cabeça enquanto estava deitado. Você consegue liga-lo, é um Pixel 4. Ele está com a bateria completamente carregada, mas não possui nenhum sinal de rede: Como você procede?"
+    botao1.innerText = "Desligo ele pra economizar bateria";
+    botao2.innerText = "Mantenho ligado celular e uso a luz do flash como lanterna";
 
     botao1.onclick  = desligado;
     botao2.onclick = ligado;
 }
 function deitado(){
-    texto.textContent = "Você não estava sonhando... Uma Python gigante te achou, te devorou, já era volte pro começo do seu sonho-pesadelo na Caverna Escura"
+    texto.textContent = "Você não estava sonhando... Uma Python gigante te achou, te devorou, já era volte pro começo do seu sonho-pesadelo na Caverna Escura";
+    
+    
+    
     botao1.innerText = "Reset";    
-    botao2.innerText = "none";
+    botao2.innerText = "Já era!!!";
    
     botao1.onclick  = iniciarJogo;
-    
+    botao2.onclick  = iniciarJogo;
 }
 function ligado(){
-    texto.textContent = "Ao ligar a lanterna revela-se uma câmara com a altura de 7 metros, cheia de estalagmites e estalactites, ela é um hub central de um conjunto de galerias e você percebe umas inscrições diabólicas em um dos cantos onde se prepara um altar de sacrifícios todo sujo de sangue seco. Você entra em pânico e sai correndo desesperado. A Python Gigante te encontra e te devora. Volte ao seu sonho-pesadelo na Caverna Escura."
+    document.body.style.backgroundImage = "url('/imagens_jogo_a20/cobra-serpente-gigantesca.jpg')";
+    texto.textContent = "A fraca luz da lanterna é capaz de revelar a câmara subterrânea que vc está. Aparentemente a altura é de 7 metros, e ela está cheia de estalagmites e estalactites ao lado de onde vc se encontrava deitado. O comprimento dela é mais extenso e você não consegue visualiza-lo ao todo com essa pequena fonte de luz. Você encontra uma trilha de sangue e resolve seguir... A Python Gigante acaba te encontrando e vc foi devorado! volta pro começo do seu 'sonho-pesadelo' dentro do saco de dormir"    
     botao1.innerText = "Reset";    
-    botao2.style.display = "none";
+    botao2.style.display = "Já era!!!";
 
     botao1.onclick = iniciarJogo;
 }
 function desligado(){
-    texto.textContent = "Apesar de toda  escuridão, seus olhos se acostumam com o breu e seus sentidos vão se aguçando.Você consegue sentir uma corrente de ar fresco e um barulho de água escorrendo. Com passos cuidadosos você vai tateando um caminho em direção a entrada da brisa fresca?"
-    botao1.innerText = "Ir para o lado oposta da brisa";    
-    botao2.innerText = "Andar em direção ao barulho da água";
+    texto.textContent = "Mesmo sem enxergar onde você realmente está, seus instintos se aguçaram. É possível sentir agora uma corrente de ar fresco vindo de um local da caverna, e por detrás da melodia de gotas que caem constantemente ouve-se o som de água corrente, provavelmente é um rio subterrâneo que não está muito longe. Com passos cautelosos você avança:"
+    botao1.innerText = "Andar em direção ao barulho da água";    
+    botao2.innerText = "Ir para o lado da brisa";
 
-    botao1.onclick = caminha;
-    botao2.onclick = segue;
+    botao1.onclick = segue;
+    botao2.onclick = caminha;
 }
 
 function segue(){
-    texto.textContent = "Ao seguir seus instintos primordiais em direção a brisa e o som da água. Lentamente vc observa que ao fundo desse caminho tem  uma entrada de luz. Vai seguindo em direção e tudo vai ficando mais claro. De repente você encontra uma câmara com abertura total do teto, e o telefone toca. Você atende e é uma equipe de resgate te informando que vc será içado Você está salvo!!!!"
-    botao1.innerText = "PARABÉNS! VOCÊ SOBREVIVEU!!!"; 
-    
+    texto.textContent = "Ao seguir seus instintos primordiais em direção a brisa fresca vacê avança lentamete. Quanto mais você anda você vai percebendo que bem ao fundo desse caminho tem  uma entrada de luz. Ao seguir em direção dela tudo vai ficando cada vez mais claro. De repente você se encontra em uma câmara com abertura total do teto, e o telefone toca. É uma mesagem de texto dizendo:Parabéns você está salvo, a equipe de resgate te içará em breve!!!!"
+    botao1.innerText = "Viva,Viva,Viva!!!"; 
+    botao2.innerText = "PARABÉNS! VOCÊ SOBREVIVEU";
 
     botao1.onclick = iniciarJogo;
-    botao2.onclick = none;
+    botao2.onclick = iniciarJogo;
 }
 function caminha(){
-    texto.textContent = "Você andou pro lado oposto da saída, e enconotrou a Pyhton Gigantee que te deva! Volte ao seu sonho-pesadelo na Caverna Escura!!!"
-    botao1.innerText = "Reset"; 
-    botao2.innerText = "none";
+    texto.textContent = "Ao ouvir a sinfonia da voz das águas você !!!"
+    botao1.innerText = "PARABÉNS! VOCÊ SOBREVIVEU!!!"; 
+    botao2.innerText = "Viva,Viva,Viva!!!";
 
     botao1.onclick = iniciarJogo;
+    botao2.onclick = iniciarJogo;
    
 }
 
