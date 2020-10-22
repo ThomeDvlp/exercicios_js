@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+</head>
+<style>
+    button {
+        width: 300px;
+        height:150px;
+        background-color: aqua;
+        color: red;
+        text-decoration: bold;
+        border-radius: 30px;
+        font-size: 40px;
+    }
+    body {
+        display:flex;
+        justify-content:center;
+        margin:90px;
+        background-color: coral;
+    }
+</style>
+<body>
+
+    
+    
+    <script>
+        
+        var criaBotao = document.createElement('button');
+        
+        criaBotao.innerText = 'Me Clica';
+        
+        document.body.appendChild(criaBotao);
+        
+        var botao = document.querySelector('button');
+        
+        botao.addEventListener('click', function(){
+            criaBotao.style.backgroundColor = 'green';
+        })
+
+        botao.addEventListener('mousemove', function(){
+            criaBotao.innerText = "{Me Clica}";
+        })
+
+        botao.addEventListener('mouseout', function(){
+            criaBotao.style.backgroundColor = 'aqua';
+            criaBotao.innerText = 'Me Clica';
+        })
+
+        
+        
+    </script>
+</body>
+</html>
